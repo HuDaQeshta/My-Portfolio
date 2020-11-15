@@ -1,3 +1,31 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 2.1875rem;
+  top: 2.1875rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-btn .btn-line {
+  width: 1.75rem;
+  height: 0.1875rem;
+  margin: 0 0 0.3125rem 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +35,7 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
+  text-transform: capitalize;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
@@ -72,7 +101,7 @@ main .icons a {
 }
 main .icons a:hover {
   color: #eece1a;
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
 }
 main#home {
   overflow: hidden;
