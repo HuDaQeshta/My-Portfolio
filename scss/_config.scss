@@ -2,7 +2,7 @@ $primary-color: #444;
 $light-color: #fff;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../imgs/background.jpg);
+$home-image: url(../imgs/photo-1508780709619-79562169bc64.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -27,6 +27,15 @@ $background-opacity: 0.9;
         z-index: -1;
       }
     }
+  }
+}
+
+//Function for setting text color, and it is a function not a mixin because we want to return a color from it, and mixins doesn't return any values but functions does
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
