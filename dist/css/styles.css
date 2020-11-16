@@ -161,6 +161,7 @@ h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
   background: rgba(248, 248, 248, 0.5);
+  display: inline-block;
 }
 
 a {
@@ -255,7 +256,6 @@ main#home h1 {
   padding: 1.5rem 2.5rem;
   border: 3px white solid;
   margin-bottom: 3rem;
-  background: white;
   transition: all 0.5s ease-out;
 }
 .boxes div:hover {
@@ -281,10 +281,6 @@ main#home h1 {
 .btn-dark {
   background: #747474;
   color: white;
-}
-.btn-dark .fas,
-.btn-dark .fab {
-  margin-right: 1rem;
 }
 
 .btn-light {
