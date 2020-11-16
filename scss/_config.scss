@@ -1,6 +1,6 @@
-$primary-color: #444;
-$light-color: #fff;
-$secondary-color: #eece1a;
+$primary-color: #f3f3f3;
+$light-color: rgb(255, 255, 255);
+$secondary-color: rgb(233, 128, 119);
 $show-home-image: true;
 $home-image: url(../imgs/photo-1508780709619-79562169bc64.jpg);
 $background-opacity: 0.9;
@@ -23,7 +23,7 @@ $background-opacity: 0.9;
         right: 0;
         width: 100%;
         height: 100%;
-        background: rgba($primary-color, $background-opacity);
+        background: rgba($primary-color, $background-opacity - 0.2);
         z-index: -1;
       }
     }

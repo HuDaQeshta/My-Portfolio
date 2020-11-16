@@ -10,7 +10,7 @@
   width: 1.75rem;
   height: 0.1875rem;
   margin: 0 0 0.3125rem 0;
-  background: #fff;
+  background: #000;
   transition: all 0.5s ease-out;
 }
 .menu-btn.close {
@@ -30,7 +30,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.96;
   visibility: hidden;
 }
 .menu.show {
@@ -49,7 +49,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #373737;
+  background: #e6e6e6;
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -58,7 +58,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu-branding {
-  background: #444;
+  background: #f3f3f3;
   transition: all 0.5s ease-out;
   transform: translate3d(0, 100%, 0);
 }
@@ -68,9 +68,12 @@
 .menu-branding .portrait {
   width: 15.625rem;
   height: 15.625rem;
-  background: url("");
+  background: url("../imgs/portrait.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
-  border: solid 3px #eece1a;
+  border: solid 3px #e98077;
 }
 .menu .nav-item {
   transform: translate3d(600px, 0, 0);
@@ -80,7 +83,7 @@
   transform: translate3d(0, 0, 0);
 }
 .menu .nav-item.current > a {
-  color: #eece1a;
+  color: #e98077;
 }
 .menu .nav-link {
   display: inline-block;
@@ -89,11 +92,11 @@
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 350;
-  color: #fff;
+  color: #000;
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
-  color: #eece1a;
+  color: #e98077;
 }
 
 .nav-item:nth-child(1) {
@@ -117,8 +120,8 @@
 }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #f3f3f3;
+  color: #000;
   height: 100%;
   margin: 0;
   text-transform: capitalize;
@@ -137,7 +140,7 @@ body#bg-img:after {
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(68, 68, 68, 0.9);
+  background: rgba(243, 243, 243, 0.7);
   z-index: -1;
 }
 
@@ -157,11 +160,11 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(73, 73, 73, 0.5);
+  background: rgba(248, 248, 248, 0.5);
 }
 
 a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -172,7 +175,7 @@ header {
 }
 
 .text-secondary {
-  color: #eece1a;
+  color: #e98077;
 }
 
 main {
@@ -184,9 +187,10 @@ main .icons {
 }
 main .icons a {
   padding: 0.4rem;
+  color: white;
 }
 main .icons a:hover {
-  color: #eece1a;
+  color: #e98077;
   transition: all 0.5s ease-out;
 }
 main#home {
@@ -206,7 +210,7 @@ main#home h1 {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #eece1a 3px solid;
+  border: #e98077 3px solid;
 }
 .about-info .bio {
   grid-area: bio;
@@ -219,19 +223,65 @@ main#home h1 {
   grid-area: job2;
 }
 .about-info .job {
-  background: #515151;
+  background: white;
   padding: 0.5rem;
-  border-bottom: #eece1a 5px solid;
+  border-bottom: #e98077 5px solid;
+}
+
+.projects {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects img {
+  width: 100%;
+  border: 3px white solid;
+}
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #e98077;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover, .btn-light:hover, .btn-dark:hover {
+  background: #e98077;
+  color: white;
+}
+
+.btn-dark {
+  background: #747474;
+  color: white;
+}
+
+.btn-light {
+  background: white;
+  color: gray;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #dadada;
+  color: #000;
   height: 60px;
 }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -264,7 +314,7 @@ div.menu-branding.show {
     transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url("../smaller.jpg");
+    background: url("../portrait.jpg");
     width: 150px;
     height: 150px;
   }
@@ -273,10 +323,18 @@ div.menu-branding.show {
     grid-template-areas: "bioimage" "bio" "job1" "job2";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
 
