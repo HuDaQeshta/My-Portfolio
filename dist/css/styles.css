@@ -236,6 +236,7 @@ main#home h1 {
 }
 .projects img {
   width: 100%;
+  padding: 0 auto;
   border: 3px white solid;
 }
 .projects img:hover {
