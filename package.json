@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Responsive portfolio",
   "main": "index.js",
-  "homepage": "https://HuDaQeshta.github.io/My-Portfolio",
+  "homepage": "https://hudaqeshta.github.io/My-Portfolio",
   "scripts": {
     "sass": "sass scss/main.scss dist/css/styles.css",
     "deploy": "gh-pages -d dist"
