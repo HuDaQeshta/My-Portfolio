@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "My Responsive portfolio",
   "main": "index.js",
+  "homepage": "https://HuDaQeshta.github.io/My-Portfolio",
   "scripts": {
-    "sass": "sass scss/main.scss dist/css/styles.css"
+    "sass": "sass scss/main.scss dist/css/styles.css",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HuDaQeshta/My-Portfolio"
   },
   "author": "Huda Qeshta",
   "license": "MIT",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "sass": "^1.29.0"
   }
 }
